@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".ui.scan.resultscan.ResultScanFragment">
+    
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/label_waste_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Jenis Sampah"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_type_waste"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Sampah Organik"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/label_waste_type"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/label_what_is_waste"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Apa Itu?"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_type_waste"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_what_is_waste"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Sampah Organik"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/label_what_is_waste"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/label_how_process_waste"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Cara Pengolahan Sampah"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_what_is_waste"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_how_process_waste"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Sampah Organik"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/label_how_process_waste"/>
+    
+    
+</androidx.constraintlayout.widget.ConstraintLayout>
