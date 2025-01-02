@@ -1,12 +1,13 @@
 package id.hanifalfaqih.reuseit.ui.game
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.unity3d.player.UnityPlayerActivity
 import id.hanifalfaqih.reuseit.databinding.FragmentGameBinding
 
 class GameFragment : Fragment() {
@@ -28,11 +29,16 @@ class GameFragment : Fragment() {
         _binding = FragmentGameBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textNotifications
-        gameViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
         return root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.btnToGame.setOnClickListener {
+            startActivity(Intent(requireContext(), UnityPlayerActivity::class.java))
+        }
+
     }
 
     override fun onDestroyView() {
