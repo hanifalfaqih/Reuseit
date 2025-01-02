@@ -1,3 +1,5 @@
+import org.gradle.internal.impldep.bsh.commands.dir
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -40,6 +42,8 @@ android {
 }
 
 dependencies {
+    implementation(project(":unityLibrary"))
+    implementation(fileTree(mapOf("dir" to "${rootProject.projectDir}/unityLibrary/libs", "include" to listOf("*.jar"))))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
