@@ -1,6 +1,0 @@
-com.unity3d.player.test.unityLibrary-androidTest-0 /home/hanif/AndroidStudioProjects/ProjectPribadi/Reuseit/unityLibrary/build/generated/res/resValues/androidTest/debug
-com.unity3d.player.test.unityLibrary-mergeDebugAndroidTestResources-1 /home/hanif/AndroidStudioProjects/ProjectPribadi/Reuseit/unityLibrary/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/merged.dir
-com.unity3d.player.test.unityLibrary-mergeDebugAndroidTestResources-2 /home/hanif/AndroidStudioProjects/ProjectPribadi/Reuseit/unityLibrary/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/stripped.dir
-com.unity3d.player.test.unityLibrary-debugAndroidTest-3 /home/hanif/AndroidStudioProjects/ProjectPribadi/Reuseit/unityLibrary/build/intermediates/merged_res/debugAndroidTest/mergeDebugAndroidTestResources
-com.unity3d.player.test.unityLibrary-debug-4 /home/hanif/AndroidStudioProjects/ProjectPribadi/Reuseit/unityLibrary/build/intermediates/packaged_res/debug/packageDebugResources
-com.unity3d.player.test.unityLibrary-debug-5 /home/hanif/AndroidStudioProjects/ProjectPribadi/Reuseit/unityLibrary/mobilenotifications.androidlib/build/intermediates/packaged_res/debug/packageDebugResources
