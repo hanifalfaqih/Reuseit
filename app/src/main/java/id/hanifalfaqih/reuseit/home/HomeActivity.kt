@@ -2,14 +2,10 @@ package id.hanifalfaqih.reuseit.home
 
 import android.content.Intent
 import android.os.Bundle
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import id.hanifalfaqih.reuseit.R
 import id.hanifalfaqih.reuseit.databinding.ActivityHomeBinding
 import id.hanifalfaqih.reuseit.ui.scan.ScanActivity

@@ -26,7 +26,6 @@ import id.hanifalfaqih.reuseit.R
 import id.hanifalfaqih.reuseit.databinding.ActivityScanBinding
 import id.hanifalfaqih.reuseit.helper.rotateBitmapIfRequired
 import id.hanifalfaqih.reuseit.ml.ImageClassifier
-import id.hanifalfaqih.reuseit.ml.wasteProcessingInfo
 import id.hanifalfaqih.reuseit.ui.scan.resultscan.ResultScanFragment
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors

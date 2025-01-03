@@ -6,7 +6,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import id.hanifalfaqih.reuseit.data.model.Content
 import id.hanifalfaqih.reuseit.data.repository.DIYRepository
-import id.hanifalfaqih.reuseit.ui.home.course.CourseViewModel
 import kotlinx.coroutines.launch
 
 class DIYViewModel(private val repository: DIYRepository): ViewModel() {
