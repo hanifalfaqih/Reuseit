@@ -1,6 +1,8 @@
 package id.hanifalfaqih.reuseit.ui.detailcontent
 
 import android.os.Bundle
+import android.util.Log
+import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -22,7 +24,7 @@ class DetailContentActivity : AppCompatActivity() {
     private val binding get() = _binding!!
 
     private lateinit var detailContentViewModel: DetailContentViewModel
-    private lateinit var content: Content
+    private var content: Content? = null
 
     private var contentId = 0
 
@@ -37,24 +39,28 @@ class DetailContentActivity : AppCompatActivity() {
             insets
         }
 
-        contentId = intent.getIntExtra(CONTENT_ID, 0).apply {
-            detailContentViewModel.getDetailContent(this)
-        }
-
         val apiService = ApiConfig.getApiService()
         val detailContentRepository = DetailContentRepositoryImpl(apiService)
         val detailRepositoryFactory = GenericViewModelFactory {
             DetailContentViewModel(detailContentRepository)
         }
-        detailContentViewModel = ViewModelProvider(this, detailRepositoryFactory)[DetailContentViewModel::class.java]
+        detailContentViewModel =
+            ViewModelProvider(this, detailRepositoryFactory)[DetailContentViewModel::class.java]
+
+        contentId = intent.getIntExtra(CONTENT_ID, 0)
+        detailContentViewModel.getDetailContent(contentId)
 
         observeData()
-        setContentData(content)
+
+        binding.toolbar.setNavigationOnClickListener {
+            onBackPressedDispatcher.onBackPressed()
+        }
     }
 
     private fun observeData() {
         lifecycleScope.launch {
             detailContentViewModel.detailContent.observe(this@DetailContentActivity) { detailContent ->
+                Log.d(DetailContentActivity::class.java.simpleName, detailContent.toString())
                 setContentData(detailContent)
             }
         }
@@ -62,20 +68,25 @@ class DetailContentActivity : AppCompatActivity() {
 
     private fun setContentData(content: Content?) {
         content?.let {
+            binding.toolbar.title = it.title
+
             Glide.with(this)
                 .load(it.imageThumbnail)
                 .into(binding.ivThumbnail)
 
-            Glide.with(this)
-                .load(it.imageContent)
-                .into(binding.ivContent)
+            if (it.imageContent == null) {
+                binding.ivContent.visibility = View.GONE
+            } else {
+                Glide.with(this)
+                    .load(it.imageContent)
+                    .into(binding.ivContent)
+            }
 
             binding.tvTypeContent.text = it.typeContent
             binding.tvTypeTrash.text = it.typeTrash
-            binding.tvViewsContent.setText(it.views)
+            binding.tvViewsContent.text = it.views.toString()
             binding.tvHeader.text = it.header
             binding.tvContent.text = it.content
-
         }
     }
 

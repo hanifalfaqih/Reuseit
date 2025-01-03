@@ -25,7 +25,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
-                tools:src="@drawable/ic_launcher_foreground"
+                tools:src="@drawable/ic_launcher_background"
                 app:layout_collapseMode="parallax" />
 
             <com.google.android.material.appbar.MaterialToolbar
@@ -62,7 +62,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="16dp"
                     android:textSize="16sp"
-                    android:text="DIY" />
+                    tools:text="DIY" />
 
                 <TextView
                     android:id="@+id/tv_type_trash"
@@ -70,14 +70,14 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="16dp"
                     android:textSize="16sp"
-                    android:text="Organic" />
+                    tools:text="Organic" />
 
                 <TextView
                     android:id="@+id/tv_views_content"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="16sp"
-                    android:text="1000"
+                    tools:text="1000"
                     android:drawableStart="@drawable/ic_baseline_eye_24"
                     android:drawablePadding="8dp"/>
 
@@ -88,7 +88,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingBottom="8dp"
-                android:text="Header"
+                tools:text="Header"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -112,7 +112,7 @@
                 android:paddingTop="16dp"
                 android:paddingBottom="16dp"
                 android:textSize="14sp"
-                android:text="Content" />
+                tools:text="Content" />
 
             <View
                 android:layout_width="match_parent"

@@ -24,7 +24,7 @@ dependencyResolutionManagement {
 
 rootProject.name = "Reuseit"
 include(":app")
-include(":unityLibrary")
-include(":unityLibrary:mobilenotifications.androidlib")
-project(":unityLibrary:mobilenotifications.androidlib").projectDir = File(rootDir, "unityLibrary/mobilenotifications.androidlib")
+//include(":unityLibrary")
+//include(":unityLibrary:mobilenotifications.androidlib")
+//project(":unityLibrary:mobilenotifications.androidlib").projectDir = File(rootDir, "unityLibrary/mobilenotifications.androidlib")
 

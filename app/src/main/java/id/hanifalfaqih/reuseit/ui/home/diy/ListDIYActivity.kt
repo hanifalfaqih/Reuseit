@@ -44,6 +44,8 @@ class ListDIYActivity : AppCompatActivity() {
         }
         diyViewModel = ViewModelProvider(this, diyRepositoryFactory)[DIYViewModel::class.java]
 
+        diyViewModel.getAllDIYContent()
+
         diyAdapter = DIYAdapter { diyId ->
             intentToDetailContent(diyId)
         }

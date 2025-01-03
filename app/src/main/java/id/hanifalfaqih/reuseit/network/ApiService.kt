@@ -11,19 +11,19 @@ import retrofit2.http.Path
 interface ApiService {
 
     @GET("diy")
-    fun getAllDIY(): Response<ResponseData<Content>>
+    suspend fun getAllDIY(): Response<ResponseData<Content>>
 
     @GET("diy/top-5")
-    fun getTop5DIY(): Response<ResponseData<Content>>
+    suspend fun getTop5DIY(): Response<ResponseData<Content>>
 
     @GET("course")
-    fun getAllCourse(): Response<ResponseData<Content>>
+    suspend fun getAllCourse(): Response<ResponseData<Content>>
 
     @GET("course/top-5")
-    fun getTop5Course(): Response<ResponseData<Content>>
+    suspend fun getTop5Course(): Response<ResponseData<Content>>
 
     @GET("content/{id}")
-    fun getContentDetail(
+    suspend fun getContentDetail(
         @Path("id") id: Int
     ): Response<ResponseDataDetail<Content>>
 

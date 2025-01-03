@@ -1,10 +1,12 @@
 package id.hanifalfaqih.reuseit.ui.home.diy
 
+import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import id.hanifalfaqih.reuseit.data.model.Content
 import id.hanifalfaqih.reuseit.data.repository.DIYRepository
+import id.hanifalfaqih.reuseit.ui.home.course.CourseViewModel
 import kotlinx.coroutines.launch
 
 class DIYViewModel(private val repository: DIYRepository): ViewModel() {
@@ -37,6 +39,7 @@ class DIYViewModel(private val repository: DIYRepository): ViewModel() {
     }
 
     fun getTop5DIYContent() {
+        Log.d(DIYViewModel::class.java.simpleName, "GET TOP 5 DIY CONTENT")
         viewModelScope.launch {
             try {
                 val response = repository.getTop5DIYContent()

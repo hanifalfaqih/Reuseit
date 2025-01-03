@@ -45,6 +45,8 @@ class ListCourseActivity : AppCompatActivity() {
         }
         courseViewModel = ViewModelProvider(this, courseRepositoryFactory)[CourseViewModel::class.java]
 
+        courseViewModel.getAllCourseContent()
+
         courseAdapter = CourseAdapter { courseId ->
             intentToDetailContent(courseId)
         }

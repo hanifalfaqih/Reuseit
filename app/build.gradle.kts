@@ -7,12 +7,12 @@ plugins {
 
 android {
     namespace = "id.hanifalfaqih.reuseit"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "id.hanifalfaqih.reuseit"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -46,8 +46,8 @@ android {
 }
 
 dependencies {
-    implementation(project(":unityLibrary"))
-    implementation(fileTree(mapOf("dir" to "${rootProject.projectDir}/unityLibrary/libs", "include" to listOf("*.jar"))))
+//    implementation(project(":unityLibrary"))
+//    implementation(fileTree(mapOf("dir" to "${rootProject.projectDir}/unityLibrary/libs", "include" to listOf("*.jar"))))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

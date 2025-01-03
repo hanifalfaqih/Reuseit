@@ -1,18 +1,17 @@
-package id.hanifalfaqih.reuseit.ui.game
+package id.hanifalfaqih.reuseit.home.ui.notifications
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.unity3d.player.UnityPlayerActivity
-import id.hanifalfaqih.reuseit.databinding.FragmentGameBinding
+import id.hanifalfaqih.reuseit.databinding.FragmentNotificationsBinding
 
-class GameFragment : Fragment() {
+class NotificationsFragment : Fragment() {
 
-    private var _binding: FragmentGameBinding? = null
+    private var _binding: FragmentNotificationsBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -23,10 +22,10 @@ class GameFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val gameViewModel =
-            ViewModelProvider(this).get(GameViewModel::class.java)
+        val notificationsViewModel =
+            ViewModelProvider(this).get(NotificationsViewModel::class.java)
 
-        _binding = FragmentGameBinding.inflate(inflater, container, false)
+        _binding = FragmentNotificationsBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         return root
@@ -35,10 +34,9 @@ class GameFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.btnToGame.setOnClickListener {
-            startActivity(Intent(requireContext(), UnityPlayerActivity::class.java))
-        }
+        binding.btnGoToGame.setOnClickListener {
 
+        }
     }
 
     override fun onDestroyView() {

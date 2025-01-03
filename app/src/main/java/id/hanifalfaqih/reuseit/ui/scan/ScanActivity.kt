@@ -179,7 +179,7 @@ class ScanActivity : AppCompatActivity(), ImageCapture.OnImageSavedCallback {
         ResultScanFragment.newInstance(result).show(supportFragmentManager, "ResultScanFragment")
 
         // Tampilkan hasil
-        Toast.makeText(this, "Classification Result: $result", Toast.LENGTH_LONG).show()
+//        Toast.makeText(this, "Classification Result: $result", Toast.LENGTH_LONG).show()
     }
 
     override fun onImageSaved(outputFileResults: ImageCapture.OutputFileResults) {

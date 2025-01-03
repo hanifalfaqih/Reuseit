@@ -1,5 +1,6 @@
 package id.hanifalfaqih.reuseit.ui.detailcontent
 
+import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -22,7 +23,8 @@ class DetailContentViewModel(private val repository: DetailContentRepository): V
                 if (response.isSuccessful) {
                     val responseData = response.body()
                     responseData?.let {
-                        _detailContent.value = it.data
+                        _detailContent.value = it.data?.get(0)
+                        Log.d(DetailContentViewModel::class.java.simpleName, it.data.toString())
                     }
                 } else {
                     _errorMessage.value = "Error: ${response.code()} - ${response.message()}"

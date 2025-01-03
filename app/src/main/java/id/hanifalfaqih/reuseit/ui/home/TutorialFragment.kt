@@ -23,7 +23,7 @@ import id.hanifalfaqih.reuseit.ui.home.diy.DIYAdapter
 import id.hanifalfaqih.reuseit.ui.home.diy.DIYViewModel
 import kotlinx.coroutines.launch
 
-class HomeFragment : Fragment() {
+class TutorialFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
 

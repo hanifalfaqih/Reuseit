@@ -1,5 +1,6 @@
 package id.hanifalfaqih.reuseit.ui.home.course
 
+import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -37,6 +38,7 @@ class CourseViewModel(private val repository: CourseRepository): ViewModel() {
     }
 
     fun getTop5CourseContent() {
+        Log.d(CourseViewModel::class.java.simpleName, "GET TOP 5 COURSE CONTENT")
         viewModelScope.launch {
             try {
                 val response = repository.getTop5CourseContent()

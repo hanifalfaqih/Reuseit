@@ -21,7 +21,9 @@ class DIYAdapter(private val diyContentId: (Int) -> Unit): ListAdapter<Content, 
                     .load(data.imageThumbnail)
                     .into(it.ivItemDiy)
 
-                diyContentId.invoke(data.id)
+                itemView.setOnClickListener {
+                    diyContentId.invoke(data.id)
+                }
             }
         }
     }

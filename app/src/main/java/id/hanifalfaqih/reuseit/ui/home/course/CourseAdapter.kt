@@ -21,7 +21,9 @@ class CourseAdapter(private val courseContentId: (Int) -> Unit): ListAdapter<Con
                     .load(data.imageThumbnail)
                     .into(it.ivItemCourse)
 
-                courseContentId.invoke(data.id)
+                itemView.setOnClickListener {
+                    courseContentId.invoke(data.id)
+                }
             }
         }
     }

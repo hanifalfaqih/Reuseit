@@ -19,7 +19,7 @@ class ApiConfig {
                     val originalRequest = chain.request()
                     val modifiedRequest = originalRequest.newBuilder()
                         .addHeader("Authorization", BEARER_TOKEN)
-                        .addHeader("x-api-key", API_KEY)
+                        .addHeader("API_KEY", API_KEY)
                         .build()
                     chain.proceed(modifiedRequest) }
                 .addInterceptor(loggingInterceptor)
