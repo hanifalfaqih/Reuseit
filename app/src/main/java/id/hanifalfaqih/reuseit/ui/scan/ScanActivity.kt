@@ -101,6 +101,10 @@ class ScanActivity : AppCompatActivity(), ImageCapture.OnImageSavedCallback {
         binding.btnCamera.setOnClickListener {
             takePicture()
         }
+
+        binding.toolbar.setNavigationOnClickListener {
+            onBackPressedDispatcher.onBackPressed()
+        }
     }
 
     private fun startCamera() {

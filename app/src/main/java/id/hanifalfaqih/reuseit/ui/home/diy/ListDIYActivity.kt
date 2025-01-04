@@ -52,6 +52,10 @@ class ListDIYActivity : AppCompatActivity() {
 
         observeData()
         initRecyclerView()
+
+        binding.toolbar.setNavigationOnClickListener {
+            onBackPressedDispatcher.onBackPressed()
+        }
     }
 
     private fun observeData() {

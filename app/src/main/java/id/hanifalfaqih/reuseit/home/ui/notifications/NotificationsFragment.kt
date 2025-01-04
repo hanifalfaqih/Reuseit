@@ -33,9 +33,7 @@ class NotificationsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.btnGoToGame.setOnClickListener {
 
-        }
     }
 
     override fun onDestroyView() {
