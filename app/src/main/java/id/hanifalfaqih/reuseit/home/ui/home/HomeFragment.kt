@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.unity3d.player.UnityPlayerActivity
 import id.hanifalfaqih.reuseit.data.repository.impl.CourseRepositoryImpl
 import id.hanifalfaqih.reuseit.data.repository.impl.DIYRepositoryImpl
 import id.hanifalfaqih.reuseit.databinding.FragmentHomeBinding
@@ -83,6 +84,10 @@ class HomeFragment : Fragment() {
         binding.tvShowAllCourses.setOnClickListener {
             startActivity(Intent(requireContext(), ListCourseActivity::class.java))
 //            Toast.makeText(requireContext(), "GO TO ALL LIST COURSES", Toast.LENGTH_SHORT).show()
+        }
+
+        binding.gamesTrashHeroes.setOnClickListener {
+            startActivity(Intent(requireContext(), UnityPlayerActivity::class.java))
         }
 
         observeData()
