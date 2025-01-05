@@ -4334,6 +4334,7 @@ struct Bone_t1AADF9954DE3F719C877A348AB25E110690822C9  : public MonoBehaviour_t5
 struct BoxTrigger_tFAE80FA33CA46842FA102BBA43D24668BF9952E0  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
 	SnapController_t5686C07092382D944C702E153277DD4FA088C054* ___snapController;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___box;
 };
 struct Draggable_t17626E06E94F0AF1F247C78A6A8BBD600C6DDEEA  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
@@ -6119,9 +6120,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6628[4] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6631[3] = 
 {
 	static_cast<int32_t>(offsetof(AudioManager_t4BE66A4A0E184D85AF74C37BC93BFBEC52953C7B_StaticFields, ___instance)),static_cast<int32_t>(offsetof(AudioManager_t4BE66A4A0E184D85AF74C37BC93BFBEC52953C7B, ___trueAudio)),static_cast<int32_t>(offsetof(AudioManager_t4BE66A4A0E184D85AF74C37BC93BFBEC52953C7B, ___falseAudio)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6632[1] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6632[2] = 
 {
-	static_cast<int32_t>(offsetof(BoxTrigger_tFAE80FA33CA46842FA102BBA43D24668BF9952E0, ___snapController)),};
+	static_cast<int32_t>(offsetof(BoxTrigger_tFAE80FA33CA46842FA102BBA43D24668BF9952E0, ___snapController)),static_cast<int32_t>(offsetof(BoxTrigger_tFAE80FA33CA46842FA102BBA43D24668BF9952E0, ___box)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6634[7] = 
 {
 	static_cast<int32_t>(offsetof(Draggable_t17626E06E94F0AF1F247C78A6A8BBD600C6DDEEA, ___dragEndedCallback)),static_cast<int32_t>(offsetof(Draggable_t17626E06E94F0AF1F247C78A6A8BBD600C6DDEEA, ___isDragging)),static_cast<int32_t>(offsetof(Draggable_t17626E06E94F0AF1F247C78A6A8BBD600C6DDEEA, ___mouseDragStartPosition)),static_cast<int32_t>(offsetof(Draggable_t17626E06E94F0AF1F247C78A6A8BBD600C6DDEEA, ___spriteDragStartPosition)),static_cast<int32_t>(offsetof(Draggable_t17626E06E94F0AF1F247C78A6A8BBD600C6DDEEA, ___posPosition)),static_cast<int32_t>(offsetof(Draggable_t17626E06E94F0AF1F247C78A6A8BBD600C6DDEEA, ___moveDirection)),static_cast<int32_t>(offsetof(Draggable_t17626E06E94F0AF1F247C78A6A8BBD600C6DDEEA, ___moveSpeed)),};

@@ -16,6 +16,7 @@ extern void AudioManager_Awake_m8138BCED4D692C83C95626A1A09AB46EA5205569 (void);
 extern void AudioManager_PlayTrueAudio_mA88835C7D9FDCA464062505F31B79619ABE49F00 (void);
 extern void AudioManager_PlayFalseAudio_mF04290558EDBE68F48BFE53151D1019AC311DE48 (void);
 extern void AudioManager__ctor_mA793A9DF6B975D03690B7C953972EFE41AE4D5E6 (void);
+extern void BoxTrigger_Start_mC59EC30F4A8B796B67E546F7325039A7DA1613CD (void);
 extern void BoxTrigger_Awake_m47A951150093FA1B8A9A200F51B94161B53A5C88 (void);
 extern void BoxTrigger_OnTriggerEnter2D_mD80F1CCEF1F03A793346D9C1C9F5EB7D32E41922 (void);
 extern void BoxTrigger__ctor_m943195DCD54BEF453052E21DA0D2F21F34C5F7EE (void);
@@ -38,6 +39,7 @@ extern void MainMenuController_Start_m26371D166488BA9A98CE757741C6B0A7503C2E9E (
 extern void MainMenuController_Update_mB0547EC4AC7DBCFFF9E66D2F793EBA4662EECF8F (void);
 extern void MainMenuController_Next_mED936C29E286A2882164BB848CFB28B9DE061F4D (void);
 extern void MainMenuController_Back_mEC479B71776FBA4BCBBE4E08D42D14510865AE14 (void);
+extern void MainMenuController_ExitGame_mB36E391F470799B23CA3CF2EF986DA3C2C9D23C1 (void);
 extern void MainMenuController__ctor_m9727FC638FDF6BDF302E10C6351846B395013EA4 (void);
 extern void SnapController_Start_m98AEA3DAB2D5121BE63890956FD003B217B554D2 (void);
 extern void SnapController_Update_mD51D810F1C411BD351D3E4AA6D9F84685DD494FA (void);
@@ -64,12 +66,13 @@ extern void WinLoseController_ExitGame_m83734DE786045F3114E88EECD42006DE1C7F2C76
 extern void WinLoseController__ctor_mE7400E8DD0F6BCFEEA2CAC2607471830C3587830 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1 (void);
-static Il2CppMethodPointer s_methodPointers[52] = 
+static Il2CppMethodPointer s_methodPointers[54] = 
 {
 	AudioManager_Awake_m8138BCED4D692C83C95626A1A09AB46EA5205569,
 	AudioManager_PlayTrueAudio_mA88835C7D9FDCA464062505F31B79619ABE49F00,
 	AudioManager_PlayFalseAudio_mF04290558EDBE68F48BFE53151D1019AC311DE48,
 	AudioManager__ctor_mA793A9DF6B975D03690B7C953972EFE41AE4D5E6,
+	BoxTrigger_Start_mC59EC30F4A8B796B67E546F7325039A7DA1613CD,
 	BoxTrigger_Awake_m47A951150093FA1B8A9A200F51B94161B53A5C88,
 	BoxTrigger_OnTriggerEnter2D_mD80F1CCEF1F03A793346D9C1C9F5EB7D32E41922,
 	BoxTrigger__ctor_m943195DCD54BEF453052E21DA0D2F21F34C5F7EE,
@@ -92,6 +95,7 @@ static Il2CppMethodPointer s_methodPointers[52] =
 	MainMenuController_Update_mB0547EC4AC7DBCFFF9E66D2F793EBA4662EECF8F,
 	MainMenuController_Next_mED936C29E286A2882164BB848CFB28B9DE061F4D,
 	MainMenuController_Back_mEC479B71776FBA4BCBBE4E08D42D14510865AE14,
+	MainMenuController_ExitGame_mB36E391F470799B23CA3CF2EF986DA3C2C9D23C1,
 	MainMenuController__ctor_m9727FC638FDF6BDF302E10C6351846B395013EA4,
 	SnapController_Start_m98AEA3DAB2D5121BE63890956FD003B217B554D2,
 	SnapController_Update_mD51D810F1C411BD351D3E4AA6D9F84685DD494FA,
@@ -119,8 +123,9 @@ static Il2CppMethodPointer s_methodPointers[52] =
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033,
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1,
 };
-static const int32_t s_InvokerIndices[52] = 
+static const int32_t s_InvokerIndices[54] = 
 {
+	6114,
 	6114,
 	6114,
 	6114,
@@ -142,6 +147,7 @@ static const int32_t s_InvokerIndices[52] =
 	6114,
 	6114,
 	4851,
+	6114,
 	6114,
 	6114,
 	6114,
@@ -178,7 +184,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	52,
+	54,
 	s_methodPointers,
 	0,
 	NULL,
