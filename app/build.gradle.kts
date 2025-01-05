@@ -44,8 +44,8 @@ android {
 }
 
 dependencies {
-//    implementation(project(":unityLibrary"))
-//    implementation(fileTree(mapOf("dir" to "${rootProject.projectDir}/unityLibrary/libs", "include" to listOf("*.jar"))))
+    implementation(project(":unityLibrary"))
+    implementation(fileTree(mapOf("dir" to "${rootProject.projectDir}/unityLibrary/libs", "include" to listOf("*.jar"))))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
