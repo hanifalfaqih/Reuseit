@@ -22,7 +22,7 @@
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/iv_item_course"
-            android:layout_width="100dp"
+            android:layout_width="150dp"
             android:layout_height="100dp"
             android:scaleType="fitCenter"/>
 
