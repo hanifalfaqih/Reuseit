@@ -23,8 +23,8 @@
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/iv_item_course"
             android:layout_width="150dp"
-            android:layout_height="100dp"
-            android:scaleType="fitCenter"/>
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter" />
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"

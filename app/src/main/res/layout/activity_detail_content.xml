@@ -15,10 +15,12 @@
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:contentScrim="?attr/colorPrimary"
+            app:contentScrim="?attr/colorOnPrimary"
             app:expandedTitleMarginEnd="16dp"
             app:expandedTitleMarginStart="16dp"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:expandedTitleTextColor="?attr/colorOnPrimary"
+            app:collapsedTitleTextColor="?attr/colorPrimary">
 
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/iv_thumbnail"
