@@ -3,11 +3,11 @@
     <style name="Theme.Reuseit" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">#1a1a1a</item>
-        <item name="colorPrimaryVariant">#d5ccc4</item>
+        <item name="colorPrimaryVariant">#66BB6A</item>
         <item name="colorOnPrimary">#efefef</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">#c0bcb9</item>
-        <item name="colorSecondaryVariant">#a59f9b</item>
+        <item name="colorSecondary">#66BB6A</item>
+        <item name="colorSecondaryVariant">#388E3C</item>
         <item name="colorOnSecondary">#1a1a1a</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
