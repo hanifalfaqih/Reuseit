@@ -62,11 +62,17 @@ public class UnityPlayerActivity extends Activity implements IUnityPlayerLifecyc
     }
 
     // Quit Unity
-    @Override protected void onDestroy ()
-    {
-        mUnityPlayer.destroy();
+    @Override
+    protected void onDestroy() {
+        if (mUnityPlayer != null) {
+            mUnityPlayer.quit(); // Memastikan Unity benar-benar berhenti
+            mUnityPlayer.destroy();
+            mUnityPlayer = null; // Bebaskan resource
+        }
         super.onDestroy();
     }
+
+
 
     // If the activity is in multi window mode or resizing the activity is allowed we will use
     // onStart/onStop (the visibility callbacks) to determine when to pause/resume.
