@@ -2,6 +2,7 @@ package id.hanifalfaqih.reuseit.home.ui.home
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,6 +15,7 @@ import id.hanifalfaqih.reuseit.data.repository.impl.CourseRepositoryImpl
 import id.hanifalfaqih.reuseit.data.repository.impl.DIYRepositoryImpl
 import id.hanifalfaqih.reuseit.databinding.FragmentHomeBinding
 import id.hanifalfaqih.reuseit.helper.GenericViewModelFactory
+import id.hanifalfaqih.reuseit.home.HomeActivity
 import id.hanifalfaqih.reuseit.network.ApiConfig
 import id.hanifalfaqih.reuseit.ui.detailcontent.DetailContentActivity
 import id.hanifalfaqih.reuseit.ui.detailcontent.DetailContentActivity.Companion.CONTENT_ID
@@ -26,6 +28,9 @@ import id.hanifalfaqih.reuseit.ui.home.diy.ListDIYActivity
 import kotlinx.coroutines.launch
 
 class HomeFragment : Fragment() {
+    companion object {
+        private const val UNITY_REQUEST_CODE = 1
+    }
 
     private var _binding: FragmentHomeBinding? = null
 
@@ -87,7 +92,8 @@ class HomeFragment : Fragment() {
         }
 
         binding.gamesTrashHeroes.setOnClickListener {
-            startActivity(Intent(requireContext(), UnityPlayerActivity::class.java))
+            val intent = Intent(requireContext(), UnityPlayerActivity::class.java)
+            startActivityForResult(intent, UNITY_REQUEST_CODE)
         }
 
         observeData()
@@ -128,5 +134,16 @@ class HomeFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == UNITY_REQUEST_CODE) {
+            // Tangani logika ketika keluar dari Unity
+            Log.i("Coba", "Unity activity selesai")
+            // Anda bisa menambahkan logika lain seperti menampilkan pesan
+            val intent = Intent(requireContext(), HomeActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

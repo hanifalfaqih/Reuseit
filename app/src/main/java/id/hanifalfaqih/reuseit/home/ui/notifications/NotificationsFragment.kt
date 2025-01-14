@@ -2,6 +2,7 @@ package id.hanifalfaqih.reuseit.home.ui.notifications
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,8 +10,12 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.unity3d.player.UnityPlayerActivity
 import id.hanifalfaqih.reuseit.databinding.FragmentNotificationsBinding
+import id.hanifalfaqih.reuseit.home.HomeActivity
 
 class NotificationsFragment : Fragment() {
+    companion object {
+        private const val UNITY_REQUEST_CODE = 1
+    }
 
     private var _binding: FragmentNotificationsBinding? = null
 
@@ -36,12 +41,25 @@ class NotificationsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.btnGoToGame.setOnClickListener {
-            startActivity(Intent(requireContext(), UnityPlayerActivity::class.java))
+            val intent = Intent(requireContext(), UnityPlayerActivity::class.java)
+            startActivityForResult(intent, UNITY_REQUEST_CODE)
         }
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == UNITY_REQUEST_CODE) {
+            // Tangani logika ketika keluar dari Unity
+            Log.i("Coba", "Unity activity selesai")
+            // Anda bisa menambahkan logika lain seperti menampilkan pesan
+            val intent = Intent(requireContext(), HomeActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
